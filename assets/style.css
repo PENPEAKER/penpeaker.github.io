@@ -173,6 +173,13 @@ section h2 {
     padding: 20px;
     margin-top: 20px;
     border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border: 1px solid rgba(0,255,200,0.3);
+    box-shadow: 0 0 30px rgba(0,255,200,0.15);
 }
 
 footer {
@@ -278,6 +285,29 @@ html {
     opacity: 0;
     transform: translateY(40px);
     transition: all 0.8s ease;
+}
+
+h1 {
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    left: -10%;
+    top: -10%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,255,200,0.08), transparent 60%);
+    animation: pulseShield 4s infinite ease-in-out;
+    z-index: -1;
+}
+
+@keyframes pulseShield {
+    0% { transform: scale(0.9); opacity: 0.6; }
+    50% { transform: scale(1.1); opacity: 0.2; }
+    100% { transform: scale(0.9); opacity: 0.6; }
 }
 
 .reveal.active {
