@@ -195,7 +195,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 let particles = [];
-const particleCount = 110;
+const particleCount = 140;
 
 class Particle {
     constructor() {
@@ -237,7 +237,7 @@ function connectParticles() {
 
             if (distance < 9000) {
                 ctx.beginPath();
-                ctx.strokeStyle = "rgba(0,150,255,0.08)";
+                ctx.strokeStyle = "rgba(0,180,255,0.15)";
                 ctx.lineWidth = 0.4;
                 ctx.moveTo(particles[a].x, particles[a].y);
                 ctx.lineTo(particles[b].x, particles[b].y);
@@ -255,7 +255,7 @@ function init() {
 }
 
 function animate() {
-    ctx.fillStyle = "rgba(0,0,0,0.9)";
+    ctx.fillStyle = "rgba(0,0,0,0.95)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     particles.forEach(p => {
