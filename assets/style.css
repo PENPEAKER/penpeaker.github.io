@@ -75,6 +75,22 @@ html, body {
     overflow-x: hidden;
 }
 
+/* ================= VOID CYBER BACKGROUND ================= */
+
+#cyber-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background: #000;
+}
+
+body {
+    background: #000;
+    overflow-x: hidden;
+}
 
 /* ================= PREMIUM BLACK + BLUE NEON BACKGROUND ================= */
 
