@@ -46,6 +46,8 @@ Actively seeking entry-level Cybersecurity Analyst / SOC Analyst opportunities.
 </section>
 
 <section id="projects">
+    <h2 class="reveal">📌 Project Overview</h2>
+<div class="card reveal">
     <h2>Major Project</h2>
     <div class="card">
         <h3>Windows & Linux GhostGate</h3>
@@ -186,6 +188,21 @@ window.addEventListener("resize", () => {
 
 init();
 animate();
+</script>
+    <script>
+const reveals = document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll', () => {
+    reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const revealPoint = 100;
+
+        if (elementTop < windowHeight - revealPoint) {
+            el.classList.add('active');
+        }
+    });
+});
 </script>
     
 </body>
