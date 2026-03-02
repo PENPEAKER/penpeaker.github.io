@@ -337,3 +337,6 @@ h1::after {
     0% { top: -120px; }
     100% { top: 100%; }
 }
+
+background: #000000;
+overflow-x: hidden;
