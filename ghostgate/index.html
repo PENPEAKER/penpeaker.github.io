@@ -3,6 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+
     <title>Windows GhostGate | Cybersecurity Project</title>
     <style>
         body {
@@ -191,8 +192,13 @@ typeEffect();
 const canvas = document.getElementById("cyber-bg");
 const ctx = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
 
 let particles = [];
 const particleCount = 140;
