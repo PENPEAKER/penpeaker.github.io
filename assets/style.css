@@ -98,9 +98,8 @@ body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     color: #e6edf3;
-    background: #05080f;
-    overflow-x: hidden
-    
+    background: #000000;
+    overflow-x: hidden;
 }
 
 
@@ -178,8 +177,8 @@ section h2 {
 
 footer {
     text-align: center;
-    padding: 30px;
-    background: #111827;
+    padding: 40px;
+    background: transparent;
     color: #64748b;
 }
 
@@ -189,12 +188,11 @@ footer {
 #contact-cyber {
     position: relative;
     padding: 120px 20px;
-    background: transparent;
+    background: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 .cyber-container {
     position: relative;
