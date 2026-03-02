@@ -84,7 +84,6 @@
 </head>
 <body>
 <div class="scan-line"></div>
-<canvas id="cyber-bg"></canvas>
 <div class="container">
 
     <h1><span id="typing"></span></h1>
@@ -187,100 +186,6 @@ function typeEffect() {
     }
 }
 typeEffect();
-</script>
-    <script>
-const canvas = document.getElementById("cyber-bg");
-const ctx = canvas.getContext("2d");
 
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-}
-
-resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
-
-let particles = [];
-const particleCount = 140;
-
-class Particle {
-    constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 1.5 + 0.5;
-        this.speedX = (Math.random() - 0.5) * 0.3;
-        this.speedY = (Math.random() - 0.5) * 0.3;
-        this.color = Math.random() > 0.5
-            ? "rgba(0,200,140,0.6)"
-            : "rgba(0,140,255,0.6)";
-    }
-
-    update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-
-        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-    }
-
-    draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = this.color;
-        ctx.shadowColor = this.color;
-        ctx.shadowBlur = 6;
-        ctx.fill();
-    }
-}
-
-function connectParticles() {
-    for (let a = 0; a < particles.length; a++) {
-        for (let b = a; b < particles.length; b++) {
-
-            let dx = particles[a].x - particles[b].x;
-            let dy = particles[a].y - particles[b].y;
-            let distance = dx * dx + dy * dy;
-
-            if (distance < 9000) {
-                ctx.beginPath();
-                ctx.strokeStyle = "rgba(0,180,255,0.15)";
-                ctx.lineWidth = 0.4;
-                ctx.moveTo(particles[a].x, particles[a].y);
-                ctx.lineTo(particles[b].x, particles[b].y);
-                ctx.stroke();
-            }
-        }
-    }
-}
-
-function init() {
-    particles = [];
-    for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle());
-    }
-}
-
-function animate() {
-    ctx.fillStyle = "rgba(0,0,0,0.95)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    particles.forEach(p => {
-        p.update();
-        p.draw();
-    });
-
-    connectParticles();
-    requestAnimationFrame(animate);
-}
-
-window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    init();
-});
-
-init();
-animate();
-</script>
 </body>
 </html>
