@@ -5,6 +5,7 @@ body {
     color: #f1f5f9;
 }
 
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -182,4 +183,8 @@ footer {
 
 .cyber-details a:hover {
     text-shadow: 0 0 10px rgba(0,234,255,0.6);
+}
+
+html {
+  scroll-behavior: smooth;
 }
