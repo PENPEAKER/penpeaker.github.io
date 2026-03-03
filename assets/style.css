@@ -342,25 +342,79 @@ h1::after {
 }
 
 
-/* ================= CERTIFICATES ================= */
+/* ===== CERTIFICATE CLEAN VERSION ===== */
 
-#certificates .cert-item {
+.cert-list {
+    list-style: none;
+    padding-left: 0;
     margin-bottom: 25px;
-    padding: 15px;
-    border-left: 3px solid #00eaff;
-    background: rgba(0, 255, 200, 0.04);
+}
+
+.cert-list li {
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(0,255,200,0.1);
+    color: #cbd5e1;
+    font-size: 15px;
+}
+
+.view-all-btn {
+    padding: 10px 25px;
+    background: linear-gradient(90deg, #00ffcc, #0099ff);
+    border: none;
     border-radius: 8px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-#certificates h3 {
-    margin: 0 0 8px 0;
+.view-all-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,255,200,0.4);
+}
+
+/* ===== MODAL ===== */
+
+.cert-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(6px);
+    justify-content: center;
+    align-items: center;
+}
+
+.cert-modal-content {
+    background: #0f172a;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.cert-buttons a {
+    display: block;
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 6px;
+    text-decoration: none;
+    background: rgba(0,255,200,0.1);
     color: #00ffcc;
-    font-size: 18px;
+    transition: 0.3s ease;
 }
 
-#certificates .btn {
-    margin-top: 10px;
-    display: inline-block;
+.cert-buttons a:hover {
+    background: rgba(0,255,200,0.25);
+}
+
+.close-btn {
+    float: right;
+    cursor: pointer;
+    font-size: 22px;
+    color: #00ffcc;
 }
 
 
