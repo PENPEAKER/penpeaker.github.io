@@ -621,6 +621,90 @@ h1::after {
     color: #00ffcc;
 }
 
+
+
+
+
+
+
+/* ================= CYBER TERMINAL CERT DESIGN ================= */
+
+.cert-terminal {
+    padding: 120px 10%;
+    text-align: center;
+}
+
+.terminal-title {
+    font-size: 28px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.terminal-line {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0 5%;
+}
+
+/* Main horizontal line */
+.terminal-line::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    right: 5%;
+    height: 2px;
+    background: linear-gradient(90deg,#00ffcc,#0099ff,#00ffcc);
+    opacity: 0.3;
+}
+
+/* Nodes */
+.cert-node {
+    position: relative;
+    background: #0f172a;
+    padding: 14px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(0,255,200,0.3);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: #00ffcc;
+    transition: 0.4s ease;
+    backdrop-filter: blur(6px);
+}
+
+/* Node glow */
+.cert-node::after {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 50px;
+    background: linear-gradient(90deg,#00ffcc,#0099ff);
+    opacity: 0;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+.cert-node:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0,255,200,0.5);
+}
+
+.cert-node:hover::after {
+    opacity: 0.15;
+}
+
+/* Info text */
+.terminal-info {
+    margin-top: 50px;
+    font-size: 14px;
+    color: #94a3b8;
+    letter-spacing: 1px;
+}
+
 .cert-text span {
     font-size: 13px;
     color: #94a3b8;
