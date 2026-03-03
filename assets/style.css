@@ -724,11 +724,16 @@ h1::after {
     letter-spacing: 1px;
 }
 
-.terminal-line {
-    margin-top: 60px;
+#certificates.cert-terminal {
+    padding: 160px 10% 200px 10%;
 }
 
-.section-sub {
-    margin-top: 25px;
-    margin-bottom: 40px;
+.terminal-line {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0 5%;
+    margin-top: 80px;
 }
