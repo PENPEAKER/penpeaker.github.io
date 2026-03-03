@@ -723,3 +723,12 @@ h1::after {
     font-size: 14px;
     letter-spacing: 1px;
 }
+
+.terminal-line {
+    margin-top: 60px;
+}
+
+.section-sub {
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
