@@ -48,20 +48,14 @@ Actively seeking entry-level Cybersecurity Analyst / SOC Analyst opportunities.
 <section id="certificates">
     <h2>🎓 Certifications</h2>
 
-    <div class="card">
-        <ul class="cert-list">
-            <li>Certified Ethical Hacker (CEH)</li>
-            <li>NSDC Certification</li>
-            <li>ChatGPT for Cyber Security</li>
-            <li>Cyber Security in Health Care</li>
-            <li>Introduction to Generative AI – Google Cloud</li>
-            <li>LearnTube CEH Program</li>
-            <li>Flipper Zero Hands-On Workshop – Skill Merge Institute, Kochi</li>
-        </ul>
-
-        <button class="view-all-btn" onclick="openCertModal()">
-            View Certificates
-        </button>
+    <div class="cert-grid">
+        <div class="cert-badge" onclick="openCert(0)">CEH</div>
+        <div class="cert-badge" onclick="openCert(1)">NSDC</div>
+        <div class="cert-badge" onclick="openCert(2)">ChatGPT Cyber</div>
+        <div class="cert-badge" onclick="openCert(3)">Health Care Cyber</div>
+        <div class="cert-badge" onclick="openCert(4)">Google GenAI</div>
+        <div class="cert-badge" onclick="openCert(5)">LearnTube CEH</div>
+        <div class="cert-badge" onclick="openCert(6)">Flipper Workshop</div>
     </div>
 </section>
 
@@ -227,39 +221,61 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
-    <script>
-function openCertModal() {
+   <script>
+const certs = [
+    "certificates/ceh.pdf",
+    "certificates/nsdc.pdf",
+    "certificates/chatgpt-cyber.pdf",
+    "certificates/healthcare-cyber.pdf",
+    "certificates/google-genai.pdf",
+    "certificates/learntube-ceh.pdf",
+    "certificates/flipper-workshop.pdf"
+];
+
+let currentIndex = 0;
+
+function openCert(index) {
+    currentIndex = index;
+    document.getElementById("certFrame").src = certs[currentIndex];
     document.getElementById("certModal").style.display = "flex";
 }
 
-function closeCertModal() {
+function closeCert() {
     document.getElementById("certModal").style.display = "none";
 }
 
-window.onclick = function(event) {
-    const modal = document.getElementById("certModal");
-    if (event.target === modal) {
-        modal.style.display = "none";
+function nextCert() {
+    currentIndex = (currentIndex + 1) % certs.length;
+    document.getElementById("certFrame").src = certs[currentIndex];
+}
+
+function prevCert() {
+    currentIndex = (currentIndex - 1 + certs.length) % certs.length;
+    document.getElementById("certFrame").src = certs[currentIndex];
+}
+
+window.onclick = function(e) {
+    if (e.target.id === "certModal") {
+        closeCert();
     }
 }
 </script>
 
 
-    <div id="certModal" class="cert-modal">
-    <div class="cert-modal-content">
-        <span class="close-btn" onclick="closeCertModal()">&times;</span>
+   <div id="certModal" class="cert-modal">
+    <div class="cert-modal-content slide-in">
 
-        <h3>Select Certificate</h3>
+        <span class="close-btn" onclick="closeCert()">&times;</span>
 
-        <div class="cert-buttons">
-            <a href="certificates/ceh.pdf" target="_blank">CEH</a>
-            <a href="certificates/nsdc.pdf" target="_blank">NSDC</a>
-            <a href="certificates/chatgpt-cyber.pdf" target="_blank">ChatGPT Cyber</a>
-            <a href="certificates/healthcare-cyber.pdf" target="_blank">Health Care Cyber</a>
-            <a href="certificates/google-genai.pdf" target="_blank">Google GenAI</a>
-            <a href="certificates/learntube-ceh.pdf" target="_blank">LearnTube CEH</a>
-            <a href="certificates/flipper-workshop.pdf" target="_blank">Flipper Workshop</a>
+        <div class="carousel">
+            <iframe id="certFrame" src="" frameborder="0"></iframe>
         </div>
+
+        <div class="carousel-controls">
+            <button onclick="prevCert()">⬅</button>
+            <button onclick="nextCert()">➡</button>
+        </div>
+
     </div>
 </div>
     
