@@ -47,81 +47,25 @@ Actively seeking entry-level Cybersecurity Analyst / SOC Analyst opportunities.
 
 <section id="certificates">
     <h2>🎓 Certifications</h2>
+
     <div class="card">
+        <ul class="cert-list">
+            <li>Certified Ethical Hacker (CEH)</li>
+            <li>NSDC Certification</li>
+            <li>ChatGPT for Cyber Security</li>
+            <li>Cyber Security in Health Care</li>
+            <li>Introduction to Generative AI – Google Cloud</li>
+            <li>LearnTube CEH Program</li>
+            <li>Flipper Zero Hands-On Workshop – Skill Merge Institute, Kochi</li>
+        </ul>
 
-        <div class="cert-item">
-            <h3>Certified Ethical Hacker (CEH)</h3>
-            <p>Official CEH Certification</p>
-            <a href="certificates/ceh.pdf" target="_blank" class="btn">View Certificate</a>
-        </div>
-
-        <div class="cert-item">
-            <h3>NSDC Cyber Security Certification</h3>
-            <a href="certificates/nsdc.pdf" target="_blank" class="btn">View Certificate</a>
-        </div>
-
-        <div class="cert-item">
-            <h3>ChatGPT for Cyber Security</h3>
-            <a href="certificates/chatgpt-cyber.pdf" target="_blank" class="btn">View Certificate</a>
-        </div>
-
-        <div class="cert-item">
-            <h3>Cyber Security in Health Care</h3>
-            <a href="certificates/healthcare-cyber.pdf" target="_blank" class="btn">View Certificate</a>
-        </div>
-
-        <div class="cert-item">
-            <h3>Introduction to Generative AI – Google Cloud</h3>
-            <a href="certificates/google-genai.pdf" target="_blank" class="btn">View Certificate</a>
-        </div>
-
-        <div class="cert-item">
-            <h3>LearnTube CEH Program</h3>
-            <a href="certificates/learntube-ceh.pdf" target="_blank" class="btn">View Certificate</a>
-        </div>
-
-        <div class="cert-item">
-            <h3>Flipper Zero Hands-On Workshop – Skill Merge Institute, Kochi</h3>
-            <a href="certificates/flipper-workshop.pdf" target="_blank" class="btn">View Certificate</a>
-        </div>
-
+        <button class="view-all-btn" onclick="openCertModal()">
+            View Certificates
+        </button>
     </div>
 </section>
 
-<section id="certificates">
-    <h2>🎓 Certifications</h2>
-
-    <div class="card cert-card">
-        <h3>Certified Ethical Hacker (CEH)</h3>
-        <p>Issued by Avodha Institute</p>
-        <a href="certificates/ceh.pdf" target="_blank" class="view-btn">View Certificate</a>
-
-        <h3>NSDC Certification</h3>
-        <p>National Skill Development Corporation</p>
-       
     
-    <div class="card cert-card">
-        <h3>ChatGPT for Cyber Security</h3>
-        <p>Professional Security AI Usage</p>
-       
-
-    
-        <h3>Cyber Security in Healthcare</h3>
-        
-
-  
-        <h3>Introduction to Generative AI</h3>
-        <p>Google Cloud</p>
-        
-   
-        <h3>LearnTube CEH Certification</h3>
-        d">
-        <h3>Flipper Zero Hands-On Workshop</h3>
-        <p>Skill Merge Institute, Kochi</p>
-        <a href="certificates/flipper-workshop.pdf" target="_blank" class="view-btn">View Certificate</a>
-    </div>
-
-</section>
     
 <section id="projects">
     <h2 class="reveal">📌 Project Overview</h2>
@@ -282,6 +226,42 @@ window.addEventListener('scroll', () => {
     });
 });
 </script>
+
+    <script>
+function openCertModal() {
+    document.getElementById("certModal").style.display = "flex";
+}
+
+function closeCertModal() {
+    document.getElementById("certModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById("certModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+    <div id="certModal" class="cert-modal">
+    <div class="cert-modal-content">
+        <span class="close-btn" onclick="closeCertModal()">&times;</span>
+
+        <h3>Select Certificate</h3>
+
+        <div class="cert-buttons">
+            <a href="certificates/ceh.pdf" target="_blank">CEH</a>
+            <a href="certificates/nsdc.pdf" target="_blank">NSDC</a>
+            <a href="certificates/chatgpt-cyber.pdf" target="_blank">ChatGPT Cyber</a>
+            <a href="certificates/healthcare-cyber.pdf" target="_blank">Health Care Cyber</a>
+            <a href="certificates/google-genai.pdf" target="_blank">Google GenAI</a>
+            <a href="certificates/learntube-ceh.pdf" target="_blank">LearnTube CEH</a>
+            <a href="certificates/flipper-workshop.pdf" target="_blank">Flipper Workshop</a>
+        </div>
+    </div>
+</div>
     
 </body>
     
