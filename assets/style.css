@@ -530,3 +530,98 @@ h1::after {
     cursor: pointer;
     color: #00ffcc;
 }
+
+/* ================= PREMIUM CERT DESIGN ================= */
+
+.cert-section {
+    padding: 100px 10%;
+}
+
+.cert-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.cert-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.cert-card {
+    position: relative;
+    padding: 25px;
+    border-radius: 16px;
+    cursor: pointer;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0,255,200,0.1);
+    transition: 0.4s ease;
+    overflow: hidden;
+}
+
+/* Animated glowing edge */
+.cert-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 16px;
+    background: linear-gradient(90deg,#00ffcc,#0099ff,#00ffcc);
+    background-size: 300% 300%;
+    animation: borderShift 6s linear infinite;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+@keyframes borderShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+/* Light sweep animation */
+.cert-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.08),
+        transparent
+    );
+    transform: skewX(-20deg);
+}
+
+.cert-card:hover::after {
+    animation: sweep 1.2s ease;
+}
+
+@keyframes sweep {
+    0% { left: -100%; }
+    100% { left: 150%; }
+}
+
+.cert-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px rgba(0,255,200,0.15);
+}
+
+.cert-icon {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.cert-text h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #00ffcc;
+}
+
+.cert-text span {
+    font-size: 13px;
+    color: #94a3b8;
+}
