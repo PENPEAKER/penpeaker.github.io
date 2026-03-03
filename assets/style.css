@@ -334,7 +334,33 @@ h1::after {
 }
 
 @keyframes scanMove {
+
+
+    
     0% { top: -120px; }
     100% { top: 100%; }
 }
+
+
+/* ================= CERTIFICATES ================= */
+
+#certificates .cert-item {
+    margin-bottom: 25px;
+    padding: 15px;
+    border-left: 3px solid #00eaff;
+    background: rgba(0, 255, 200, 0.04);
+    border-radius: 8px;
+}
+
+#certificates h3 {
+    margin: 0 0 8px 0;
+    color: #00ffcc;
+    font-size: 18px;
+}
+
+#certificates .btn {
+    margin-top: 10px;
+    display: inline-block;
+}
+
 
