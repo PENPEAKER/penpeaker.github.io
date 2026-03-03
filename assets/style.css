@@ -709,3 +709,17 @@ h1::after {
     font-size: 13px;
     color: #94a3b8;
 }
+
+/* =================SKILLS================= */
+
+.section-title {
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.section-sub {
+    margin-top: 15px;
+    color: #94a3b8;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
