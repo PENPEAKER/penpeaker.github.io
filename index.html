@@ -1,403 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Muhammed Murshid | Cybersecurity Portfolio</title>
-<link rel="stylesheet" href="assets/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammed Murshid | Cybersecurity Portfolio</title>
+    <!-- Meta Descriptions for SEO -->
+    <meta name="description"
+        content="Certified Ethical Hacker & Cybersecurity Analyst portfolio. Specializing in Incident Response, Malware Remediation, and DDoS Defense Engineering.">
+
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-<canvas id="cyber-bg"></canvas>
-<nav>
-    <h2>Muhammed Murshid</h2>
-    <div>
-        <a href="#about">About</a>
-        <a href="#CORE COMPETENCIES">Core Competencies</a>
-        <a href="#certificates">certificates</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact-cyber">Contact</a>
-    </div>
-</nav>
 
-<header>
-    <h1>Cybersecurity Analyst</h1>
-    <p>Incident Response • Threat Analysis • DDoS Defense Engineering</p>
-    <a href="#contact-cyber" class="btn">Contact Me</a>
-   <a href="Muhammed_Murshid_CV.pdf" class="btn">Download Resume</a>
-</header>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="custom-cursor-dot"></div>
+    <div class="cursor-outline" id="custom-cursor-outline"></div>
 
-<section id="about">
-    <h2>About Me</h2>
-    <div class="card">
-       Certified Ethical Hacker with hands-on experience in vulnerability assessment, malware incident response, and defensive security engineering.
-
-Developer of Windows & Linux-based DDoS mitigation system (GhostGate) with automated firewall integration and ML-based anomaly detection.
-
-Actively seeking entry-level Cybersecurity Analyst / SOC Analyst opportunities.
-    </div>
-</section>
-
-  
-    <section id="CORE COMPETENCIES" class="cert-section">
-<h2 class="section-title">CORE COMPETENCIES</h2>
-        <div class="section-sub">
-    Offensive Security • Defensive Engineering • Threat Analysis
-</div>
-
-    <div class="terminal-line">
-        
-        <div class="cert-node" "> Nmap</div>
-        <div class="cert-node" ">Nessus</div>
-        <div class="cert-node" ">OWASP Top 10</div>
-        <div class="cert-node"  ">Burp Suite</div>
-        <div class="cert-node"  "> Account Takeover Recovery</div>
-         <div class="cert-node"  ">Kali Linux</div>
-        <div class="cert-node"  "> Malware Response</div>
-        <div class="cert-node" ">Python</div>
-        <div class="cert-node"  ">Wireshark</div>
-        
+    <!-- Dynamic Animated Grid & Gradients Background -->
+    <div class="bg-effects">
+        <div class="bg-grid"></div>
+        <div class="bg-glow bg-glow-1"></div>
+        <div class="bg-glow bg-glow-2"></div>
     </div>
 
-    
-
-</section>
-    
-
-
-<section id="certificates" class="cert-section">
-
-    <h2 class="cert-title">🎓 Certifications</h2>
-
-    <div class="cert-container">
-
-        <div class="cert-card" onclick="openCert(0)">
-            <div class="cert-icon">🛡️</div>
-            <div class="cert-text">
-                <h3>Certified Ethical Hacker</h3>
-                <span>Avodha Institute</span>
+    <!-- Navigation Header -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i class="fa-solid fa-shield-halved logo-icon"></i>
+                M.<span>MURSHID</span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation Menu" id="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="nav-links" id="nav-links-menu">
+                <a href="#about"><i class="fa-solid fa-user-secret"></i> About</a>
+                <a href="#CORE-COMPETENCIES"><i class="fa-solid fa-terminal"></i> Competencies</a>
+                <a href="#certificates"><i class="fa-solid fa-award"></i> Certificates</a>
+                <a href="#projects"><i class="fa-solid fa-cubes"></i> Projects</a>
+                <a href="#experience"><i class="fa-solid fa-briefcase"></i> Experience</a>
+                <a href="#contact"><i class="fa-solid fa-address-card"></i> Contact</a>
             </div>
         </div>
+    </nav>
 
-        <div class="cert-card" onclick="openCert(1)">
-            <div class="cert-icon">🏛️</div>
-            <div class="cert-text">
-                <h3>NSDC Certification</h3>
-                <span>Skill Development Authority</span>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content reveal active">
+            <div class="hero-status">
+                <span class="status-dot"></span>
+                <span>SECURE CONNECTION ESTABLISHED // PORTFOLIO LIVE</span>
             </div>
-        </div>
-
-        <div class="cert-card" onclick="openCert(2)">
-            <div class="cert-icon">🤖</div>
-            <div class="cert-text">
-                <h3>ChatGPT for Cyber Security</h3>
-                <span>AI Security Usage</span>
-            </div>
-        </div>
-
-        <div class="cert-card" onclick="openCert(3)">
-            <div class="cert-icon">🏥</div>
-            <div class="cert-text">
-                <h3>Cyber Security in Healthcare</h3>
-                <span>Medical Systems Protection</span>
-            </div>
-        </div>
-
-        <div class="cert-card" onclick="openCert(4)">
-            <div class="cert-icon">☁️</div>
-            <div class="cert-text">
-                <h3>Introduction to Generative AI</h3>
-                <span>Google Cloud</span>
-            </div>
-        </div>
-
-        <div class="cert-card" onclick="openCert(5)">
-            <div class="cert-icon">📚</div>
-            <div class="cert-text">
-                <h3>LearnTube CEH Program</h3>
-                <span>Security Training</span>
-            </div>
-        </div>
-
-        <div class="cert-card" onclick="openCert(6)">
-            <div class="cert-icon">📡</div>
-            <div class="cert-text">
-                <h3>Flipper Zero Workshop</h3>
-                <span>Skill Merge Institute</span>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-    
-    
-    
-<section id="projects">
-    <h2 class="reveal">📌 Project Overview</h2>
-<div class="card reveal">
-    <h2>Major Project</h2>
-    <div class="card">
-        <h3>Windows & Linux GhostGate</h3>
-<p>Real-time DDoS detection and automated firewall blocking system. </p>
-<p> • Vulnerability Assessment (OWASP Top 10) </p>
-<p> • Incident Response & Malware Remediation </p>
-<p> • Firewall Automation & Threat Mitigation </p>
-<p> • Log Monitoring & Traffic Analysis </p>
-<p> • Python-Based Security Automation </p>
-<a href="ghostgate/" class="btn">View Project</a>
-    </div>
-</section>
-
-<section id="contact-cyber">
-
-    <div class="cyber-container">
-
-        <div class="cyber-id-card">
             <h1>Muhammed Murshid VP</h1>
-            <div class="cyber-subtitle">
-                Certified Ethical Hacker | Cybersecurity Analyst
+
+            <!-- Typewriter Text Element -->
+            <div class="hero-title-sub" id="typewriter-target"></div>
+
+            <div class="hero-bullets">
+                <span>Incident Response</span>
+                <span>Threat Analysis</span>
+                <span>DDoS Defense Engineering</span>
+                <span>Security Automation</span>
+            </div>
+
+            <div class="btn-group">
+                <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+                <a href="Muhammed_Murshid_CV.pdf" class="btn btn-secondary" download><i
+                        class="fa-solid fa-download"></i> Download Resume</a>
             </div>
         </div>
-
-        <!-- PHONE -->
-        <div class="cyber-phone">
-            <a href="tel:+918075852053">📞 +91 8075852053</a>
+        <div class="scroll-indicator">
+            <span class="mouse-icon">
+                <span class="wheel"></span>
+            </span>
+            <span class="scroll-text">Scroll to Explore</span>
         </div>
+    </header>
 
-        <!-- CONTACT DETAILS -->
-        <div class="cyber-details">
+    <!-- About Me Section -->
+    <section id="about" class="reveal">
+        <h2 class="section-title">01 // Dossier</h2>
+        <span class="section-subtitle">Profile Summary & Authorization Log</span>
 
-            <p>📧 muhammedmurshid259@gmail.com</p>
+        <div class="about-grid">
+            <div class="cyber-card tilt-target">
+                <div class="dossier-header">
+                    <span><i class="fa-solid fa-id-card-clip"></i> ID: SECURITY_ANALYST_01</span>
+                    <span class="dossier-tag">ACTIVE STATUS</span>
+                </div>
+                <div class="dossier-body">
+                    <p>
+                        I am a <strong>Certified Ethical Hacker</strong> with hands-on experience in defensive
+                        operations, incident response, vulnerability assessment, and security automation.
+                    </p>
+                    <p>
+                        My expertise lies in analyzing log anomalies, executing threat mitigation, and recovering
+                        compromised digital assets. I focus on building robust defensive systems like
+                        <strong>GhostGate</strong> (DDoS mitigation engine) and scripting secure automation loops for
+                        clients.
+                    </p>
+                    <p>
+                        <strong>Seeking opportunities:</strong> Actively looking for an entry-level
+                        <strong>Cybersecurity Analyst</strong> or <strong>SOC Analyst</strong> role to protect critical
+                        network infrastructures.
+                    </p>
+                </div>
+                <div class="dossier-footer">
+                    <span>SEC_SYS // INITIALIZED 2026.06.29</span>
+                </div>
+            </div>
 
-            <p>📍 Palakkad, Kerala</p>
-
-            <p>
-                <a href="https://www.linkedin.com/in/muhammedmushidvp/" target="_blank">
-                    🔗 LinkedIn Profile
-                </a>
-            </p>
-
+            <!-- Terminal Mock Preview -->
+            <div class="cyber-console-preview tilt-target">
+                <div class="console-bar">
+                    <div class="console-dots">
+                        <span class="console-dot red"></span>
+                        <span class="console-dot yellow"></span>
+                        <span class="console-dot green"></span>
+                    </div>
+                    <span class="console-tab">auth-check.sh</span>
+                </div>
+                <div class="console-body">
+                    <div class="console-text">
+                        <p class="console-prompt">run-scan --profile --fast</p>
+                        <p class="log-info">[+] Loading database modules...</p>
+                        <p class="log-info">[+] Checking credentials...</p>
+                        <p class="log-success">[✔] Identity: MUHAMMED MURSHID VP</p>
+                        <p class="log-success">[✔] CEH Certification: VERIFIED</p>
+                        <p class="log-success">[✔] Degree: B.A. English Lit. (Univ. of Calicut)</p>
+                        <p class="log-info">[+] System idle. Ready for operations.</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
+    <!-- Core Competencies Section -->
+    <section id="CORE-COMPETENCIES" class="reveal">
+        <h2 class="section-title">02 // Core Competencies</h2>
+        <span class="section-subtitle">Security Engineering Telemetry & Skills Map</span>
+
+        <div class="competencies-container">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="console-dots">
+                        <span class="console-dot red"></span>
+                        <span class="console-dot yellow"></span>
+                        <span class="console-dot green"></span>
+                    </div>
+                    <span class="terminal-title">guest@security-center:~$ telemetry-status</span>
+                </div>
+                <div class="terminal-content">
+                    <div class="telemetry-info">
+                        [SYS-INFO] Dynamic loading indicators reflecting skill competency ratings.
+                    </div>
+
+                    <div class="terminal-skills-grid">
+                        <!-- Skill 1 -->
+                        <div class="skill-node highlight-sec">
+                            <div class="skill-header">
+                                <span>OWASP Top 10</span>
+                                <span class="skill-icon"><i class="fa-solid fa-bug"></i></span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-level="85"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 2 -->
+                        <div class="skill-node">
+                            <div class="skill-header">
+                                <span>Nmap</span>
+                                <span class="skill-icon"><i class="fa-solid fa-network-wired"></i></span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-level="90"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 3 -->
+                        <div class="skill-node">
+                            <div class="skill-header">
+                                <span>Nessus</span>
+                                <span class="skill-icon"><i class="fa-solid fa-radar"></i></span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-level="80"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 4 -->
+                        <div class="skill-node">
+                            <div class="skill-header">
+                                <span>Burp Suite</span>
+                                <span class="skill-icon"><i class="fa-solid fa-gears"></i></span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-level="85"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 5 -->
+                        <div class="skill-node highlight-sec">
+                            <div class="skill-header">
+                                <span>Malware Response</span>
+                                <span class="skill-icon"><i class="fa-solid fa-biohazard"></i></span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-level="90"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 6 -->
+                        <div class="skill-node highlight-sec">
+                            <div class="skill-header">
+                                <span>ATO Recovery</span>
+                                <span class="skill-icon"><i class="fa-solid fa-key"></i></span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-level="85"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 7 -->
+                        <div class="skill-node">
+                            <div class="skill-header">
+                                <span>Kali Linux</span>
+                                <span class="skill-icon"><i class="fa-brands fa-linux"></i></span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-level="90"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 8 -->
+                        <div class="skill-node">
+                            <div class="skill-header">
+                                <span>Python</span>
+                                <span class="skill-icon"><i class="fa-brands fa-python"></i></span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-level="75"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 9 -->
+                        <div class="skill-node">
+                            <div class="skill-header">
+                                <span>Wireshark</span>
+                                <span class="skill-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></span>
+                            </div>
+                            <div class="skill-bar-bg">
+                                <div class="skill-bar-fill" data-level="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certificates" class="reveal">
+        <h2 class="section-title">03 // Certifications</h2>
+        <span class="section-subtitle">Verified Security & Intelligence Credentials</span>
+
+        <div class="cert-grid">
+            <!-- Cert 1 -->
+            <div class="cert-card tilt-target">
+                <div class="cert-icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="cert-info">
+                    <h3>Certified Ethical Hacker</h3>
+                    <span>Avodha Education</span>
+                    <p class="cert-date">Issued: 08/08/2025</p>
+                    <div class="cert-actions">
+                        <button class="cert-btn cert-btn-view" onclick="openCert(0)"><i class="fa-solid fa-eye"></i>
+                            View</button>
+                        <a href="certificates/ceh.pdf" class="cert-btn cert-btn-dl" download><i
+                                class="fa-solid fa-download"></i> Download</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cert 2 -->
+            <div class="cert-card tilt-target">
+                <div class="cert-icon-wrap"><i class="fa-solid fa-microchip"></i></div>
+                <div class="cert-info">
+                    <h3>Flipper Zero Workshop</h3>
+                    <span>RoomNumber404 Community</span>
+                    <p class="cert-date">Issued: 28/07/2025</p>
+                    <div class="cert-actions">
+                        <button class="cert-btn cert-btn-view" onclick="openCert(1)"><i class="fa-solid fa-eye"></i>
+                            View</button>
+                        <a href="certificates/flipper-workshop.pdf" class="cert-btn cert-btn-dl" download><i
+                                class="fa-solid fa-download"></i> Download</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cert 3 -->
+            <div class="cert-card tilt-target">
+                <div class="cert-icon-wrap"><i class="fa-solid fa-brain"></i></div>
+                <div class="cert-info">
+                    <h3>Introduction to Generative AI</h3>
+                    <span>Google Cloud / Simplilearn</span>
+                    <p class="cert-date">Issued: 07/09/2025</p>
+                    <div class="cert-actions">
+                        <button class="cert-btn cert-btn-view" onclick="openCert(2)"><i class="fa-solid fa-eye"></i>
+                            View</button>
+                        <a href="certificates/google-genai.pdf" class="cert-btn cert-btn-dl" download><i
+                                class="fa-solid fa-download"></i> Download</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cert 4 -->
+            <div class="cert-card tilt-target">
+                <div class="cert-icon-wrap"><i class="fa-solid fa-lock"></i></div>
+                <div class="cert-info">
+                    <h3>ChatGPT for Cybersecurity</h3>
+                    <span>Simplilearn SkillUp</span>
+                    <p class="cert-date">Issued: 10/09/2025</p>
+                    <div class="cert-actions">
+                        <button class="cert-btn cert-btn-view" onclick="openCert(3)"><i class="fa-solid fa-eye"></i>
+                            View</button>
+                        <a href="certificates/chatgpt-cyber.pdf" class="cert-btn cert-btn-dl" download><i
+                                class="fa-solid fa-download"></i> Download</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cert 5 -->
+            <div class="cert-card tilt-target">
+                <div class="cert-icon-wrap"><i class="fa-solid fa-hospital-user"></i></div>
+                <div class="cert-info">
+                    <h3>Cybersecurity in Healthcare</h3>
+                    <span>Simplilearn SkillUp</span>
+                    <p class="cert-date">Issued: 07/09/2025</p>
+                    <div class="cert-actions">
+                        <button class="cert-btn cert-btn-view" onclick="openCert(4)"><i class="fa-solid fa-eye"></i>
+                            View</button>
+                        <a href="certificates/healthcare-cyber.pdf" class="cert-btn cert-btn-dl" download><i
+                                class="fa-solid fa-download"></i> Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="reveal">
+        <h2 class="section-title">04 // Projects Gallery</h2>
+        <span class="section-subtitle">Tactical Security Implementations & Tools</span>
+
+        <div class="projects-container">
+            <!-- Project 1: GhostGate -->
+            <div class="project-card-cyber tilt-target">
+                <span class="project-tag-cyber">CYBERSECURITY</span>
+                <h3 class="project-title-cyber">🛡️ Windows GhostGate</h3>
+                <span class="project-subtitle-card">Real-Time DDoS Detection & Auto-Blocking System</span>
+                <p class="project-desc-cyber">
+                    A high-performance machine learning-based DDoS detection and mitigation system integrated directly
+                    with the Windows Firewall to dynamically block malicious IP activity.
+                </p>
+                <div class="project-tech-cyber">
+                    <span>Python</span>
+                    <span>Flask</span>
+                    <span>IsolationForest</span>
+                    <span>Scapy</span>
+                    <span>Windows Firewall</span>
+                    <span>Chart.js</span>
+                </div>
+                <button class="btn btn-primary btn-view-project" onclick="viewProjectDetails('ghostgate')">
+                    <i class="fa-solid fa-circle-info"></i> View Project Details
+                </button>
+            </div>
+
+            <!-- Project 2: WhatsApp Web Automation Bot -->
+            <div class="project-card-cyber tilt-target">
+                <span class="project-tag-cyber">AUTOMATION</span>
+                <h3 class="project-title-cyber">🤖 WhatsApp Business Automation Bot</h3>
+                <span class="project-subtitle-card">Interactive Customer Service Automation System</span>
+                <p class="project-desc-cyber">
+                    A Windows-based automated customer support system using Microsoft Playwright browser automation to
+                    instantly handle customer inquiries with product catalogs and warranty information.
+                </p>
+                <div class="project-tech-cyber">
+                    <span>Python</span>
+                    <span>Playwright</span>
+                    <span>Browser Automation</span>
+                    <span>Session Management</span>
+                    <span>JSON / Files</span>
+                </div>
+                <button class="btn btn-primary btn-view-project" onclick="viewProjectDetails('whatsapp')">
+                    <i class="fa-solid fa-circle-info"></i> View Project Details
+                </button>
+            </div>
+
+            <!-- Project 3: IDOR Disclosure -->
+            <div class="project-card-cyber tilt-target">
+                <span class="project-tag-cyber">PEN-TESTING</span>
+                <h3 class="project-title-cyber">🎯 Web Vulnerability Disclosure</h3>
+                <span class="project-subtitle-card">Responsible IDOR Vulnerability Reporting</span>
+                <p class="project-desc-cyber">
+                    Responsible identification, analysis, and disclosure of severe backend Insecure Direct Object
+                    Reference (IDOR) flaws exposing critical database records.
+                </p>
+                <div class="project-tech-cyber">
+                    <span>OWASP Top 10</span>
+                    <span>Burp Suite Pro</span>
+                    <span>API Pen-Testing</span>
+                    <span>Exploit Mitigation</span>
+                </div>
+                <button class="btn btn-primary btn-view-project" onclick="viewProjectDetails('vulnerability')">
+                    <i class="fa-solid fa-circle-info"></i> View Project Details
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fullscreen Interactive Case Study Overlay Modal -->
+    <div id="case-study-overlay" class="case-study-overlay-modal">
+        <div class="case-study-content">
+            <div class="case-study-header">
+                <div class="header-main-title">
+                    <span class="sys-code-tag">[CORE_ANALYSIS]</span>
+                    <h3 id="overlay-project-title">PROJECT_NAME</h3>
+                </div>
+                <button class="case-study-close-btn" id="overlay-close-btn" aria-label="Close Project Details">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="case-study-body">
+                <div class="case-study-grid">
+                    <!-- Sidebar: Summary, Tech Stack, Links -->
+                    <div class="case-study-sidebar">
+                        <div class="sidebar-block">
+                            <span class="sidebar-label">Vessel/System Description</span>
+                            <p id="overlay-project-desc" class="sidebar-desc">Project details go here...</p>
+                        </div>
+
+                        <div class="sidebar-block">
+                            <span class="sidebar-label">Technologies Used</span>
+                            <div id="overlay-project-tech" class="tech-grid-display">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+
+                        <div class="sidebar-block border-top-dashed">
+                            <span class="sidebar-label">Navigation Links</span>
+                            <div class="sidebar-actions">
+                                <button class="btn btn-secondary action-nav-btn"
+                                    onclick="closeOverlayAndScroll('experience')">
+                                    <i class="fa-solid fa-briefcase"></i> View Experience
+                                </button>
+                                <button class="btn btn-accent action-nav-btn"
+                                    onclick="closeOverlayAndScroll('contact')">
+                                    <i class="fa-solid fa-envelope"></i> Connect Node
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Section: Dynamic tabs for Overview, Architecture, Capabilities, Impact -->
+                    <div class="case-study-main">
+                        <div class="tab-navbar">
+                            <button class="tab-nav-link active" onclick="switchProjectTab('overview')">Overview</button>
+                            <button class="tab-nav-link"
+                                onclick="switchProjectTab('capabilities')">Capabilities</button>
+                            <button class="tab-nav-link" id="arch-tab-btn"
+                                onclick="switchProjectTab('architecture')">Architecture</button>
+                            <button class="tab-nav-link" id="optim-tab-btn"
+                                onclick="switchProjectTab('optimization')">Security & Optim</button>
+                        </div>
+
+                        <!-- Tab Content Slots -->
+                        <div class="tab-content-container">
+                            <!-- Tab: Overview -->
+                            <div id="tab-overview" class="tab-panel active">
+                                <div class="card-glass-spec">
+                                    <h4>📌 System Overview</h4>
+                                    <div class="spec-text" id="overlay-overview-text"></div>
+                                </div>
+                                <div class="card-glass-spec mt-4" id="overlay-impact-card">
+                                    <h4>📈 System Impact & Outcomes</h4>
+                                    <ul class="spec-list" id="overlay-impact-list"></ul>
+                                </div>
+                            </div>
+
+                            <!-- Tab: Capabilities -->
+                            <div id="tab-capabilities" class="tab-panel">
+                                <div class="card-glass-spec">
+                                    <h4 id="capabilities-title">🚀 Core Capabilities</h4>
+                                    <ul class="spec-list list-check-style" id="overlay-capabilities-list"></ul>
+                                </div>
+                            </div>
+
+                            <!-- Tab: Architecture -->
+                            <div id="tab-architecture" class="tab-panel">
+                                <div class="card-glass-spec">
+                                    <h4>🧠 System Architecture Workflow</h4>
+                                    <ul class="spec-list list-steps-style" id="overlay-architecture-list"></ul>
+                                    <p class="architecture-note mt-3"><i>Note: Implementation details are summarized at
+                                            a high level to maintain system security.</i></p>
+                                </div>
+                            </div>
+
+                            <!-- Tab: Security & Optimization -->
+                            <div id="tab-optimization" class="tab-panel">
+                                <div class="card-glass-spec">
+                                    <h4>🔐 Security & Optimization Protocols</h4>
+                                    <ul class="spec-list list-shield-style" id="overlay-optimization-list"></ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Real-time Terminal Logger Simulator -->
+                        <div class="terminal-logs-window">
+                            <div class="terminal-window-header">
+                                <span class="header-indicator">CONSOLE LOG FEED</span>
+                                <span class="header-status">STATUS: RUNNING</span>
+                            </div>
+                            <div class="terminal-logs-output" id="overlay-terminal-output">
+                                <!-- Logs will stream here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-</section>
+    <!-- Experience Section -->
+    <section id="experience" class="reveal">
+        <h2 class="section-title">05 // Experience</h2>
+        <span class="section-subtitle">Active Defensive Security & Incident Logs</span>
 
-<footer>
-© 2026 Muhammed Murshid VP | Cybersecurity Portfolio
-</footer>
-
-   <script>
-const canvas = document.getElementById("cyber-bg");
-const ctx = canvas.getContext("2d");
-
-canvas.width = window.innerWidth;
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-
-    if (window.innerWidth < 768) {
-        canvas.height = window.innerHeight * 0.6;
-    } else {
-        canvas.height = window.innerHeight;
-    }
-}
-
-resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
-
-let particles = [];
-const isMobile = window.innerWidth < 768;
-const particleCount = isMobile ? 40 : 110;
-
-class Particle {
-    constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 1.5 + 0.5;
-        this.speedX = (Math.random() - 0.5) * 0.3;
-        this.speedY = (Math.random() - 0.5) * 0.3;
-        this.color = Math.random() > 0.5
-    ? "rgba(0,200,140,0.6)"
-    : "rgba(0,140,255,0.6)";
-    }
-
-    update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-
-        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-    }
-
-    draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = this.color;
-        ctx.shadowColor = this.color;
-        ctx.shadowBlur = 6;
-        ctx.fill();
-    }
-}
-
-function connectParticles() {
-    for (let a = 0; a < particles.length; a++) {
-        for (let b = a; b < particles.length; b++) {
-
-            let dx = particles[a].x - particles[b].x;
-            let dy = particles[a].y - particles[b].y;
-            let distance = dx * dx + dy * dy;
-
-           if (distance < 5000) {
-                ctx.beginPath();
-                ctx.strokeStyle = "rgba(0,150,255,0.08)";
-                ctx.lineWidth = 0.4;
-                ctx.moveTo(particles[a].x, particles[a].y);
-                ctx.lineTo(particles[b].x, particles[b].y);
-                ctx.stroke();
-            }
-        }
-    }
-}
-
-function init() {
-    particles = [];
-    for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle());
-    }
-}
-
-function animate() {
-    ctx.fillStyle = "rgba(0,0,0,0.9)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    particles.forEach(p => {
-        p.update();
-        p.draw();
-    });
-
-    connectParticles();
-    requestAnimationFrame(animate);
-}
-
-window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-   function resizeCanvas() {
-    canvas.width = window.innerWidth;
-
-    if (window.innerWidth < 768) {
-        canvas.height = window.innerHeight * 0.6;
-    } else {
-        canvas.height = window.innerHeight;
-    }
-}
-
-resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
-    init();
-});
-
-init();
-
-       let animationId;
-
-function animate() {
-    ctx.fillStyle = "rgba(0,0,0,0.9)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    particles.forEach(p => {
-        p.update();
-        p.draw();
-    });
-
-    connectParticles();
-    animationId = requestAnimationFrame(animate);
-}
-
-document.addEventListener("visibilitychange", () => {
-    if (document.hidden) {
-        cancelAnimationFrame(animationId);
-    } else {
-        animate();
-    }
-});
-animate();
-</script>
-    <script>
-const reveals = document.querySelectorAll('.reveal');
-
-window.addEventListener('scroll', () => {
-    reveals.forEach(el => {
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
-        const revealPoint = 100;
-
-        if (elementTop < windowHeight - revealPoint) {
-            el.classList.add('active');
-        }
-    });
-});
-</script>
-
-   <script>
-const certs = [
-    "certificates/ceh.pdf",
-    "certificates/nsdc.pdf",
-    "certificates/chatgpt-cyber.pdf",
-    "certificates/healthcare-cyber.pdf",
-    "certificates/google-genai.pdf",
-    "certificates/learntube-ceh.pdf",
-    "certificates/flipper-workshop.pdf"
-];
-
-let currentIndex = 0;
-
-function openCert(index) {
-    currentIndex = index;
-    document.getElementById("certFrame").src = certs[currentIndex];
-    document.getElementById("certModal").style.display = "flex";
-}
-
-function closeCert() {
-    document.getElementById("certModal").style.display = "none";
-}
-
-function nextCert() {
-    currentIndex = (currentIndex + 1) % certs.length;
-    document.getElementById("certFrame").src = certs[currentIndex];
-}
-
-function prevCert() {
-    currentIndex = (currentIndex - 1 + certs.length) % certs.length;
-    document.getElementById("certFrame").src = certs[currentIndex];
-}
-
-window.onclick = function(e) {
-    if (e.target.id === "certModal") {
-        closeCert();
-    }
-}
-</script>
-
-
-   <div id="certModal" class="cert-modal">
-    <div class="cert-modal-content slide-in">
-
-        <span class="close-btn" onclick="closeCert()">&times;</span>
-
-        <div class="carousel">
-            <iframe id="certFrame" src="" frameborder="0"></iframe>
+        <div class="timeline-cyber">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-dot-cyber"></div>
+                <div class="timeline-header-wrap">
+                    <h3 class="timeline-role">Cybersecurity Incident Responder <span>| Freelance</span></h3>
+                    <span class="timeline-date">Feb 2026 – Mar 2026</span>
+                </div>
+                <div class="timeline-body-wrap">
+                    <p>
+                        Led active threat mitigation and breach containment during real-world compromise scenarios.
+                    </p>
+                    <ul class="timeline-list">
+                        <li>Remediated Trojan malware infection and identified entry vector.</li>
+                        <li>Recovered compromised Google & Instagram accounts after unauthorized MFA changes.</li>
+                        <li>Identified unauthorized device activity and login timeframe.</li>
+                        <li>Preserved 14,314 business-critical contacts during active breach.</li>
+                        <li>Delivered structured remediation and threat analysis report.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="carousel-controls">
-            <button onclick="prevCert()">⬅</button>
-            <button onclick="nextCert()">➡</button>
+    <!-- Contact Dossier Section -->
+    <section id="contact" class="reveal">
+        <h2 class="section-title">06 // Connect Node</h2>
+        <span class="section-subtitle">Secure Messaging & Communications Routing</span>
+
+        <div class="contact-dossier">
+            <div class="cyber-card tilt-target">
+                <div class="contact-card-header">
+                    <h2>Muhammed Murshid VP</h2>
+                    <span class="contact-title-monologue">
+                        Certified Ethical Hacker | Defensive Systems Specialist
+                    </span>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Phone -->
+                    <a href="tel:+918075852053" class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <div class="contact-meta-label">PHONE ENCRYPTED LINK</div>
+                            <div class="contact-value">+91 8075852053</div>
+                        </div>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:muhammedmurshid259@gmail.com" class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <div class="contact-meta-label">SECURE SMTP MAIL</div>
+                            <div class="contact-value">muhammedmurshid259@gmail.com</div>
+                        </div>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://linkedin.com/in/muhammedmushidvp" target="_blank" rel="noopener noreferrer"
+                        class="contact-item">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <div>
+                            <div class="contact-meta-label">PROFESSIONAL NODE</div>
+                            <div class="contact-value">linkedin.com/in/muhammedmushidvp</div>
+                        </div>
+                    </a>
+
+                    <!-- GitHub -->
+                    <a href="https://github.com/penpeaker" target="_blank" rel="noopener noreferrer"
+                        class="contact-item">
+                        <i class="fa-brands fa-github"></i>
+                        <div>
+                            <div class="contact-meta-label">SOURCE CODE CONTROL</div>
+                            <div class="contact-value">github.com/penpeaker</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="dossier-footer text-center no-border-margin">
+                    <span>LOCATION: PALAKKAD, KERALA, INDIA</span>
+                </div>
+            </div>
         </div>
+    </section>
 
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                © 2026 Muhammed Murshid VP | Cybersecurity Portfolio
+            </div>
+            <div class="footer-status-check">
+                <i class="fa-solid fa-circle-check"></i> ALL SYSTEMS NOMINAL // UPTIME: 100%
+            </div>
+        </div>
+    </footer>
+
+    <!-- Certificates Modal -->
+    <div id="certModal" class="cert-modal">
+        <div class="cert-modal-content">
+            <div class="modal-header">
+                <span id="certModalTitle" class="modal-title">CREDENTIAL MODULE DISPLAY</span>
+                <span class="close-btn" onclick="closeCert()">&times;</span>
+            </div>
+
+            <div class="carousel">
+                <iframe id="certFrame" src="" frameborder="0" title="Credential PDF Viewer"></iframe>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-btn" onclick="prevCert()" aria-label="Previous Certificate"><i
+                        class="fa-solid fa-arrow-left"></i></button>
+                <button class="carousel-btn" onclick="nextCert()" aria-label="Next Certificate"><i
+                        class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
     </div>
-</div>
-    
+
+    <!-- Scripts Injection -->
+    <script src="assets/scripts.js"></script>
 </body>
-    
+
 </html>
